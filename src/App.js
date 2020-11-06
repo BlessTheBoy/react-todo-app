@@ -23,7 +23,7 @@ function App() {
         <Header />        
         <TodoList list={list}/>
         <AddPopUp />
-        <BlessTheBoy />
+        {/* <BlessTheBoy /> */}
         {/* <form>
           <input value={input} onChange={e => setInput(e.target.value)} />
           <button type="submit" onClick={addTodo} disabled={!input}>Add todo</button>

@@ -14,10 +14,12 @@ function Todo(props) {
                 <EditPopUp todo = {props.todo} />                
             </div>
             <div className="controls">
-                <div className="check">
+                <div className="check" onClick={() => {db.collection('todos').doc(props.todo.id).set({
+                    completed: true
+                }, { merge: true })}}>
                     {props.todo.completed ? null : <Check />}
                 </div>
-                <div onClick={event => {db.collection('todos').doc(props.todo.id).delete()}}>
+                <div onClick={() => {db.collection('todos').doc(props.todo.id).delete()}} >
                     <Thrash />
                 </div>                    
             </div>

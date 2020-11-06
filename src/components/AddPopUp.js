@@ -4,6 +4,7 @@ import db from '../firebase'
 import 'reactjs-popup/dist/index.css';
 import firebase from 'firebase'
 import AddButton from './AddButton';
+import './css/addPopUp.css'
 
 function AddPopUp() {
     const [input, setInput] = useState('')
@@ -29,8 +30,8 @@ function AddPopUp() {
     return (
         <Popup
             trigger={
-                <div>
-                    <AddButton />
+                <div className="add-cont">
+                    <AddButton className="add-button"/>
                 </div>
             }
             modal

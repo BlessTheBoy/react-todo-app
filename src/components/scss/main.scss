@@ -20,6 +20,8 @@
         background-color: white;
         align-items: center;
         position: relative;
-        padding: 1.5rem; 
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
     }
 }
