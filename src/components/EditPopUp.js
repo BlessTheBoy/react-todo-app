@@ -3,6 +3,8 @@ import Popup from 'reactjs-popup';
 import db from '../firebase'
 import 'reactjs-popup/dist/index.css';
 import './css/editPopUp.css'
+import './css/popUp.css'
+import BlessTheBoy2 from './BlessTheBoy2';
 
 function EditPopUp(props) {
     let initialInput = props.todo.todo
@@ -46,13 +48,20 @@ function EditPopUp(props) {
                 &times;
                 </button>
                 <div className="header"> Edit Todo </div>
+                <hr/>
                 <div className="content">
                     {' '}
-                    <input type="text" value = {input} onChange = {e => setInput(e.target.value)}/>
-                    <textarea value= {details} onChange = {e => setDetails(e.target.value)}/>
+                    <div className="task-cont input-cont">
+                        <label for="task">Task</label>
+                        <input name="task" type="text" value = {input} onChange = {e => setInput(e.target.value)}/>
+                    </div>
+                    <div className="details-cont input-cont">
+                        <label for="details">details</label>
+                        <textarea name="details" value= {details} onChange = {e => setDetails(e.target.value)}/>
+                    </div>
                     <div className="actions">
                     <button
-                        className="button"
+                        className="cancel"
                         type = "button"
                         onClick={() =>{                    
                             resetTodo()
@@ -62,7 +71,7 @@ function EditPopUp(props) {
                         Cancel
                     </button>
                     <button
-                        className="button"
+                        className="save"
                         type = "submit"
                         onClick={e => {
                             e.preventDefault()
@@ -74,6 +83,7 @@ function EditPopUp(props) {
                     </button>
                     </div>
                 </div>
+                <p><span>Designed and built by </span><BlessTheBoy2 /></p>
             </form>
             )}
         </Popup>

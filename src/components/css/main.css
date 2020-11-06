@@ -38,5 +38,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
 }
 /*# sourceMappingURL=main.css.map */

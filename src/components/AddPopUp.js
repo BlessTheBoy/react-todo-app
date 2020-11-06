@@ -5,6 +5,8 @@ import 'reactjs-popup/dist/index.css';
 import firebase from 'firebase'
 import AddButton from './AddButton';
 import './css/addPopUp.css'
+import './css/popUp.css'
+import BlessTheBoy2 from './BlessTheBoy2';
 
 function AddPopUp() {
     const [input, setInput] = useState('')
@@ -47,13 +49,20 @@ function AddPopUp() {
                 &times;
                 </button>
                 <div className="header"> Add Todo </div>
+                <hr/>
                 <div className="content">
                     {' '}
-                    <input type="text" value = {input} onChange = {e => setInput(e.target.value)} placeholder="Enter new todo"/>
-                    <textarea value= {details} onChange = {e => setDetails(e.target.value)} placeholder="Enter todo details"/>
+                    <div className="task-cont input-cont">
+                        <label for="task">Task</label>
+                        <input name="task" type="text" value = {input} onChange = {e => setInput(e.target.value)} placeholder="Enter new todo"/>
+                    </div>
+                    <div className="details-cont input-cont">
+                        <label for="details">details</label>
+                        <textarea name="details" value= {details} onChange = {e => setDetails(e.target.value)} placeholder="Enter todo details"/>
+                    </div>
                     <div className="actions">
                     <button
-                        className="button"
+                        className="cancel"
                         type="button"
                         onClick={() =>{ 
                             resetTodo()
@@ -63,7 +72,7 @@ function AddPopUp() {
                         Cancel
                     </button>
                     <button
-                        className="button"
+                        className="save"
                         type="submit"
                         onClick={e => {
                             e.preventDefault()
@@ -75,6 +84,7 @@ function AddPopUp() {
                     </button>
                     </div>
                 </div>
+                <p><span>Designed and built by </span><BlessTheBoy2 /></p>
             </form>
             )}
         </Popup>
