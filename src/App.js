@@ -2,26 +2,12 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import TodoList from './components/TodoList';
 import db from './firebase'
-import firebase from 'firebase'
 import Number from './components/Number';
 import Header from './components/Header';
+import AddPopUp from './components/AddPopUp';
 
 function App() {
-  const [input, setInput] = useState('')
   const [list, setList] = useState([])
-
-  const addTodo = (e) => {
-    e.preventDefault()
-    // setList([...list, input])
-    db.collection('todos').add({
-      todo: input,
-      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-      completed: false,
-      details: ""
-    })
-
-    setInput("")
-  }
 
   useEffect(() => {
     db.collection('todos').orderBy('timestamp', 'desc').onSnapshot(snapshot => {
@@ -35,6 +21,7 @@ function App() {
         <Number todos={list}/>
         <Header />        
         <TodoList list={list}/>
+        <AddPopUp />
         {/* <form>
           <input value={input} onChange={e => setInput(e.target.value)} />
           <button type="submit" onClick={addTodo} disabled={!input}>Add todo</button>

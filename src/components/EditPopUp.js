@@ -1,11 +1,11 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import Popup from 'reactjs-popup';
 import db from '../firebase'
 import 'reactjs-popup/dist/index.css';
 
 function EditPopUp(props) {
-    const initialInput = props.todo.todo
-    const initialDetails = props.todo.details
+    let initialInput = props.todo.todo
+    let initialDetails = props.todo.details
     const [input, setInput] = useState(props.todo.todo)
     const [details, setDetails] = useState(props.todo.details)
 
@@ -14,6 +14,8 @@ function EditPopUp(props) {
             todo: input,
             details: details
         }, { merge: true })
+        initialInput = input
+        initialDetails = details
     }
     
     const resetTodo = () => {
@@ -33,20 +35,24 @@ function EditPopUp(props) {
             onClose = {resetTodo}
         >
             {close => (
-            <div className="modal">
-                <button className="close" onClick={() =>{                    
+            <form className="modal">
+                <button className="close"
+                    type="button"
+                    onClick={() =>{                    
                     resetTodo()
+                    close()
                 }}>
                 &times;
                 </button>
                 <div className="header"> Edit Todo </div>
-                <form className="content">
+                <div className="content">
                     {' '}
                     <input type="text" value = {input} onChange = {e => setInput(e.target.value)}/>
                     <textarea value= {details} onChange = {e => setDetails(e.target.value)}/>
                     <div className="actions">
                     <button
                         className="button"
+                        type = "button"
                         onClick={() =>{                    
                             resetTodo()
                             close()
@@ -56,7 +62,9 @@ function EditPopUp(props) {
                     </button>
                     <button
                         className="button"
-                        onClick={() => {
+                        type = "submit"
+                        onClick={e => {
+                            e.preventDefault()
                             updateTodo()
                             close()
                         }}
@@ -64,8 +72,8 @@ function EditPopUp(props) {
                         Save
                     </button>
                     </div>
-                </form>
-            </div>
+                </div>
+            </form>
             )}
         </Popup>
     )
