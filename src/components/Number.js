@@ -1,7 +1,10 @@
 import React, {useEffect, useState} from 'react'
+import './css/number.css'
 
 function Number(props) {
     const [number, setNumber] = useState(0)
+    const colors = ["#EB3C27", "#FA8A3B", "#2E3588", "#FEC925", "#009688", "#EA118D"]
+    const hue = colors[Math.floor(Math.random() * colors.length)]
     useEffect(() => {
         setNumber(0)
         let i = 0
@@ -11,7 +14,7 @@ function Number(props) {
         setNumber(i);
     }, [props])
     return (
-        <div>
+        <div className="number" style={{color: hue}}>
             {number}
         </div>
     )

@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #E5E5E5;
+    overflow: hidden;
+
+    .container{
+        width: 100%;
+        min-height: 1000px;
+        // height: 100vh;
+        background-color: white;
+        align-items: center;
+        position: relative;        
+    }
+}

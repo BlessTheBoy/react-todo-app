@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from 'react';
-import './App.css';
+import './components/css/main.css'
 import TodoList from './components/TodoList';
 import db from './firebase'
 import Number from './components/Number';
 import Header from './components/Header';
 import AddPopUp from './components/AddPopUp';
+import BlessTheBoy from './components/BlessTheBoy';
 
 function App() {
   const [list, setList] = useState([])
@@ -17,11 +18,12 @@ function App() {
 
   return (
     <div className="App">
-      <div>
-        <Number todos={list}/>
+      <div className="container">
+        <Number className="number" todos={list}/>
         <Header />        
         <TodoList list={list}/>
         <AddPopUp />
+        <BlessTheBoy />
         {/* <form>
           <input value={input} onChange={e => setInput(e.target.value)} />
           <button type="submit" onClick={addTodo} disabled={!input}>Add todo</button>
