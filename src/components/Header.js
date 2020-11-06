@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react'
+import BlessTheBoy2 from './BlessTheBoy2';
+import './css/header.css'
 
 function Header() {
     const weekDays = ["SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"]
@@ -17,16 +19,22 @@ function Header() {
     }, [today])
 
     return (
-        <div>
-            <div>
-                <p>{day}</p>
-                <div>
-                    <p>{month.toUpperCase()}</p>
-                    <p>{year}</p>
-                </div>
+        <div className="header">
+            <div className="heading">
+                <h1>TODO</h1>
+                <p><span>by </span><BlessTheBoy2 /></p>
             </div>
-            <div>
-                {weekDay.toUpperCase()}
+            <div className="date-cont">
+                <div className="date">
+                    <p>{day}</p>
+                    <div>
+                        <p>{month.toUpperCase()}</p>
+                        <p>{year}</p>
+                    </div>
+                </div>
+                <div className="day">
+                    {weekDay.toUpperCase()}
+                </div>
             </div>
         </div>
     )
