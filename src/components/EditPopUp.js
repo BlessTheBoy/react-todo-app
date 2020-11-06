@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import Popup from 'reactjs-popup';
 import db from '../firebase'
 import 'reactjs-popup/dist/index.css';
+import './css/editPopUp.css'
 
 function EditPopUp(props) {
     let initialInput = props.todo.todo
@@ -26,9 +27,9 @@ function EditPopUp(props) {
     return (
         <Popup
             trigger={
-                <div>
-                    <h4>{props.todo.todo}</h4>
-                    <p><small>{props.todo.details.slice(0,50) + "..."}</small></p>
+                <div className="main-content">
+                    <h4>{props.todo.todo.slice(0,30)}</h4>
+                    <p><small>{props.todo.details.slice(0,60) + "..."}</small></p>
                 </div>
             }
             modal

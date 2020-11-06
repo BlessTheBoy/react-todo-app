@@ -15,8 +15,8 @@
 
     .container{
         width: 100%;
-        min-height: 1000px;
-        // height: 100vh;
+        height: 100vh;
+        overflow: hidden;
         background-color: white;
         align-items: center;
         position: relative;

@@ -5,21 +5,21 @@ import CheckedCircle from './CheckedCircle'
 import Circle from './Circle'
 import EditPopUp from './EditPopUp'
 import Thrash from './Thrash'
+import './css/todo.css'
 function Todo(props) {
     return (
-        <li>
-            {props.todo.completed ? <CheckedCircle /> : <Circle />}
-            <div>
-                <EditPopUp todo = {props.todo} />
-                <div>
-                    {props.todo.completed ? null : 
-                    <div>
-                        <Check />
-                    </div> }
-                    <div onClick={event => {db.collection('todos').doc(props.todo.id).delete()}}>
-                        <Thrash />
-                    </div>                    
+        <li>            
+            <div className="main">
+                <div className="circle">{props.todo.completed ? <CheckedCircle /> : <Circle />}</div>
+                <EditPopUp todo = {props.todo} />                
+            </div>
+            <div className="controls">
+                <div className="check">
+                    {props.todo.completed ? null : <Check />}
                 </div>
+                <div onClick={event => {db.collection('todos').doc(props.todo.id).delete()}}>
+                    <Thrash />
+                </div>                    
             </div>
         </li>
     )
