@@ -23,6 +23,7 @@
 
 .App .container {
   width: 100%;
+  max-width: 420px;
   height: 100vh;
   overflow: hidden;
   background-color: white;
