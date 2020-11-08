@@ -5,7 +5,6 @@ import db from './firebase'
 import Number from './components/Number';
 import Header from './components/Header';
 import AddPopUp from './components/AddPopUp';
-import BlessTheBoy from './components/BlessTheBoy';
 
 function App() {
   const [list, setList] = useState([])
@@ -23,11 +22,6 @@ function App() {
         <Header />        
         <TodoList list={list}/>
         <AddPopUp />
-        {/* <BlessTheBoy /> */}
-        {/* <form>
-          <input value={input} onChange={e => setInput(e.target.value)} />
-          <button type="submit" onClick={addTodo} disabled={!input}>Add todo</button>
-        </form> */}
       </div>
     </div>
   );

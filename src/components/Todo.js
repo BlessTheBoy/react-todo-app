@@ -9,8 +9,10 @@ import './css/todo.css'
 function Todo(props) {
     return (
         <li>            
-            <div className="main">
-                <div className="circle">{props.todo.completed ? <CheckedCircle /> : <Circle />}</div>
+            <div className="main" >
+                <div className="circle" onClick={props.todo.completed ? () => {db.collection('todos').doc(props.todo.id).set({
+                    completed: false
+                }, { merge: true })} : null} style = {props.todo.completed ? {cursor: 'pointer'} : null}>{props.todo.completed ? <CheckedCircle /> : <Circle />}</div>
                 <EditPopUp todo = {props.todo} />                
             </div>
             <div className="controls">

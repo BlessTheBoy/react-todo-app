@@ -29,7 +29,7 @@ function EditPopUp(props) {
     return (
         <Popup
             trigger={
-                <div className="main-content">
+                <div className="main-content" style={props.todo.completed ? {opacity: .4} : {opacity: 1}}>
                     <h4>{props.todo.todo.slice(0,30)}</h4>
                     <p><small>{props.todo.details.slice(0,60) + "..."}</small></p>
                 </div>

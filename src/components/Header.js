@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import BlessTheBoy2 from './BlessTheBoy2';
 import './css/header.css'
 
@@ -10,13 +10,7 @@ function Header() {
     let year = today.getFullYear()
     let weekDay = weekDays[today.getDay()]
 
-    useEffect(() => {
-        today = new Date();
-        day = today.getDate();
-        month = today.toLocaleString("default", { month: "short" })
-        year = today.getFullYear()
-        weekDay = weekDays[today.getDay()]
-    }, [today])
+    
 
     return (
         <div className="header">

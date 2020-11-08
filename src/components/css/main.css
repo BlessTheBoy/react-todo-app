@@ -41,4 +41,17 @@
           flex-direction: column;
   position: relative;
 }
+
+@media screen and (min-width: 420px) {
+  .App {
+    height: 100vh;
+    padding: 2rem 0;
+  }
+  .App .container {
+    height: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
 /*# sourceMappingURL=main.css.map */

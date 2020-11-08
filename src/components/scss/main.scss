@@ -26,4 +26,13 @@
         flex-direction: column;
         position: relative;
     }
+
+    @media screen and (min-width: 420px) {        
+        height: 100vh;
+        padding: 2rem 0;
+        .container{
+            height: 100%;
+            flex-grow: 1;
+        }        
+    }
 }
