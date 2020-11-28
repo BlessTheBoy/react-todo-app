@@ -1,27 +1,26 @@
-li{
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 1rem;
+
+  .main {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    position: relative;
-    margin-bottom: 1rem;
-    
-    .main{
-        display: flex;
-        align-items: center;
-        margin-right: .8rem;
-        .circle{
-            margin-right: .8rem;
-        }
-        
+    margin-right: 0.8rem;
+    .circle {
+      margin-right: 0.8rem;
     }
-    .controls{
-        display: flex;
-        align-items: center;
-        div{
-            cursor: pointer;
-        }
-        .check{
-            margin-right: .5rem;
-        }
+  }
+  .controls {
+    display: flex;
+    align-items: center;
+    div {
+      cursor: pointer;
     }
+    .check {
+      margin-right: 1.5rem;
+    }
+  }
 }
