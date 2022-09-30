@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.number {
+  position: absolute;
+  top: -40px;
+  right: -20px;
+  font-size: 290px;
+  line-height: 290px;
+  font-family: 'Bebas Neue', cursive;
+  opacity: 0.4;
+}
+/*# sourceMappingURL=number.css.map */

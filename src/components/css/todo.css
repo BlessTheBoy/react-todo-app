@@ -1,0 +1,45 @@
+li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+li .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 0.8rem;
+}
+
+li .main .circle {
+  margin-right: 0.8rem;
+}
+
+li .controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+li .controls div {
+  cursor: pointer;
+}
+
+li .controls .check {
+  margin-right: 1.5rem;
+}
+/*# sourceMappingURL=todo.css.map */

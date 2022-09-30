@@ -1,0 +1,118 @@
+.popup-content {
+  width: 70%;
+}
+
+.modal {
+  position: relative;
+  padding: 1rem;
+  width: 100%;
+}
+
+.modal .close {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: -12px;
+  right: -15px;
+  height: 20px;
+  width: 20px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  font-size: 1rem;
+  background-color: #EB3C27;
+  color: white;
+  cursor: pointer;
+}
+
+.modal p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  margin-top: -2px;
+  padding: 0;
+  font-size: 8px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.modal p span {
+  opacity: .2;
+  margin: 0 .2rem;
+}
+
+.modal .header {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: .3rem;
+  padding: 0;
+  font-size: 1.3rem;
+}
+
+.modal hr {
+  margin-bottom: .5rem;
+}
+
+.modal .content .input-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.modal .content .input-cont label {
+  font-family: 'Bebas Neue', cursive;
+  font-size: .9rem;
+}
+
+.modal .content .task-cont input {
+  padding: .2rem;
+  outline: none;
+}
+
+.modal .content .details-cont textarea {
+  padding: .2rem;
+  outline: none;
+}
+
+.modal .content .actions {
+  text-align: center;
+  margin-bottom: .8rem;
+}
+
+.modal .content .actions button {
+  min-width: 70px;
+  padding: .4rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.modal .content .actions .cancel {
+  margin-right: 1rem;
+  background-color: #EB3C27;
+}
+
+.modal .content .actions .save {
+  background-color: #018436;
+}
+/*# sourceMappingURL=popUp.css.map */
