@@ -1,6 +1,6 @@
 import React from 'react'
 import Todo from './Todo'
-import './scss/todoList.scss'
+import './css/todoList.css'
 
 function TodoList(props) {
     return (
