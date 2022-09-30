@@ -1,6 +1,6 @@
 import React from 'react'
-import BlessTheBoy2 from './BlessTheBoy2';
-import './css/header.css'
+import BlessTheBoy2 from '../assets/BlessTheBoy2';
+import './scss/header.scss'
 
 function Header() {
     const weekDays = ["SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"]
